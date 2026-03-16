@@ -1,1 +1,4 @@
-# projetoPDM2
+Durante o desenvolvimento da atividade foi possível perceber uma diferença clara entre o modelo tradicional Multi-Activity do Android e o modelo Single Activity utilizado com Compose Navigation.
+No modelo tradicional do Android, cada tela geralmente é representada por uma Activity diferente. Isso faz com que a navegação dependa do sistema operacional Android, utilizando Intents para trocar de Activity. Esse modelo dificulta o reaproveitamento de código em outras plataformas, pois Activities existem apenas no Android.
+Já no modelo Single Activity com Compose Navigation, existe apenas uma Activity principal e todas as telas são compostables controladas por um NavHost. A navegação acontece por rotas dentro da própria interface declarativa.
+No contexto do Kotlin Multiplatform, essa abordagem facilita muito o reaproveitamento de código, pois toda a lógica de navegação e as telas podem ser colocadas no módulo compartilhado (commonMain). Dessa forma, Android e iOS utilizam exatamente a mesma lógica de interface e navegação, reduzindo duplicação de código e facilitando a manutenção do projeto.
